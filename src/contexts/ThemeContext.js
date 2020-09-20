@@ -1,4 +1,4 @@
-import React,{createContext} from 'react'
+import React,{createContext, Component} from 'react'
 
 export const ThemeContext = createContext();
 
@@ -10,9 +10,9 @@ export default class ThemeContextProvider extends Component {
     }
     render() {
         return (
-            <div>
-                
-            </div>
+            <ThemeContext.Provider value={{...this.state}}>
+
+            </ThemeContext.Provider>
         )
     }
 }
